@@ -18,7 +18,7 @@ Para testar localmente: `python -m http.server 5173` dentro desta pasta.
 
 ## Imagens
 Fotos reais (pasta `Fotos/`): sala de estar, quartos, espaço ecumênico, sala de TV, convivência, varanda, pintura.
-Geradas com Magnific, Nano Banana 2, 2K (projeto "Villa Firenze - Landing Page"): hero (álbum de família, versão horizontal e vertical), mãos no jogo de memória, jogo de cartas, caminhada no pomar, visita da família. A transparência sobre elas fica numa linha do rodapé.
+Geradas com Magnific (projeto "Villa Firenze - Landing Page"): hero (álbum de família, horizontal e vertical, Nano Banana 2.1 em 2K); mãos no jogo de memória, jogo de cartas, caminhada no pomar e visita da família (Nano Banana 2 em 2K). A transparência sobre elas fica numa linha do rodapé.
 
 ## Testes executados (12/10/2026)
 - html-validate: sem erros (index e privacidade).

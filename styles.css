@@ -88,6 +88,8 @@ h3 { font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.875rem); line-height: 1.15; lett
 .hero__lede, .nine__text > p:not(.label), .house__head p, .days__text p, .door__lede, .mode-card > p { text-wrap: balance; }
 
 svg { width: 1.5rem; height: 1.5rem; fill: currentColor; flex: none; }
+/* Sprite de ícones: só fornece os <symbol>, não ocupa espaço */
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
 
@@ -289,7 +291,7 @@ svg { width: 1.5rem; height: 1.5rem; fill: currentColor; flex: none; }
 
 /* 1. Hero claro: foto real de luz de janela, título em verde sobre a parede */
 .hero { background: var(--ivory); }
-.hero__media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.hero__media img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; }
 .hero__copy {
   display: grid;
   gap: 1.25rem;
@@ -301,14 +303,18 @@ svg { width: 1.5rem; height: 1.5rem; fill: currentColor; flex: none; }
 .hero h1 {
   --wd: 60;
   --wg: 6;
-  font-size: clamp(2.4rem, 0.8rem + 3.4vw, 4.25rem);
-  line-height: 1.02;
+  font-size: clamp(1.9rem, 1.15rem + 3.6vw, 3.25rem);
+  line-height: 1.04;
   letter-spacing: -0.03em;
   color: var(--forest);
 }
 .hero__lede { max-width: 34rem; color: var(--ink-soft); }
 .hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.75rem; margin-top: 0.5rem; }
 
+/* Tablet em pé: foto mais baixa para o convite caber na primeira tela */
+@media (min-width: 48rem) and (max-width: 63.99rem) {
+  .hero__media img { aspect-ratio: 4 / 3; object-position: 50% 28%; }
+}
 @media (min-width: 64rem) {
   .hero {
     position: relative;
@@ -318,19 +324,24 @@ svg { width: 1.5rem; height: 1.5rem; fill: currentColor; flex: none; }
     overflow: hidden;
   }
   .hero__media { position: absolute; inset: 0; }
-  .hero__media img { height: 100%; aspect-ratio: auto; object-position: 60% center; }
+  .hero__media img { height: 100%; aspect-ratio: auto; object-position: 72% center; }
   /* Véu marfim só onde está o texto e o chão escurecendo até o verde da próxima seção */
   .hero__media::after {
     content: "";
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(90deg, rgb(246 240 228 / 0.94) 0%, rgb(246 240 228 / 0.78) 30%, rgb(246 240 228 / 0) 56%),
-      linear-gradient(to bottom, rgb(28 59 36 / 0) 70%, rgb(28 59 36 / 0.7) 90%, var(--forest) 100%);
+      linear-gradient(90deg, rgb(246 240 228 / 0.95) 0%, rgb(246 240 228 / 0.82) 32%, rgb(246 240 228 / 0.35) 50%, rgb(246 240 228 / 0) 64%),
+      linear-gradient(to bottom, rgb(28 59 36 / 0) 52%, rgb(28 59 36 / 0.35) 70%, rgb(28 59 36 / 0.82) 88%, var(--forest) 100%);
   }
   .hero__copy { position: relative; padding: calc(var(--header-h) + 2rem) 0 6rem; }
   .hero__copy > * { max-width: min(36rem, 46vw); }
-  .hero h1 { max-width: min(48rem, 56vw); }
+  .hero h1 { max-width: min(48rem, 56vw); font-size: clamp(3.25rem, 0.8rem + 3.2vw, 4.25rem); line-height: 1.02; }
+}
+/* 1024 a 1279: foto enquadrada mais à esquerda, para a cuidadora ficar fora do título */
+@media (min-width: 64rem) and (max-width: 79.99rem) {
+  .hero__media img { object-position: 45% center; }
+  .hero h1 { font-size: 2.75rem; }
 }
 
 /* 2. O número 9 */
@@ -689,6 +700,40 @@ svg { width: 1.5rem; height: 1.5rem; fill: currentColor; flex: none; }
 .prose h2 { font-size: clamp(1.375rem, 1.2rem + 0.6vw, 1.75rem); margin: 2.5rem 0 0.75rem; color: var(--forest); }
 .prose p { color: var(--ink-soft); }
 .prose p + p { margin-top: 1rem; }
+
+/* Hovers: cor da marca e leve elevação, só com mouse/trackpad */
+.feature-cards li, .rhythm__cards li, .mode-card, .included li, .family__facts li {
+  transition: background-color 0.55s var(--ease), color 0.55s var(--ease), translate 0.55s var(--ease), box-shadow 0.55s var(--ease), opacity 1.2s var(--ease), transform 1.2s var(--ease), filter 1.2s var(--ease);
+}
+.feature-cards svg, .rhythm__cards svg, .mode-card__icon, .included svg, .family__facts svg {
+  transition: background-color 0.55s var(--ease), color 0.55s var(--ease), transform 0.55s var(--ease);
+}
+.marquee__track li, .days__paint, .days__cards, .care__media, .family__media, .mode-card { overflow: hidden; }
+.marquee__track li { border-radius: var(--radius); }
+.days__paint, .days__cards, .family__media { border-radius: var(--radius); }
+.care__media { border-radius: 999px 999px var(--radius) var(--radius); }
+.marquee__track img, .days img, .care__media img, .family__media img, .mode-card__img {
+  transition: transform 1.1s var(--ease);
+}
+@media (hover: hover) and (pointer: fine) {
+  .feature-cards li:hover { background: var(--forest); color: var(--ivory); translate: 0 -6px; box-shadow: 0 18px 40px -22px rgb(28 59 36 / 0.55); }
+  .feature-cards li:hover svg { background: var(--ivory); color: var(--forest); transform: rotate(-8deg) scale(1.06); }
+
+  .rhythm__cards li:hover { background: var(--moss); translate: 0 -6px; box-shadow: 0 18px 40px -22px rgb(19 42 26 / 0.7); }
+  .rhythm__cards li:hover svg { background: var(--sage-light); color: var(--forest); transform: scale(1.08); }
+
+  .mode-card:hover { background: var(--moss); translate: 0 -6px; box-shadow: 0 24px 50px -28px rgb(19 42 26 / 0.75); }
+  .mode-card:hover .mode-card__icon { background: var(--sage-light); color: var(--forest); transform: rotate(-6deg); }
+  .mode-card:hover .mode-card__img { transform: scale(1.05); }
+
+  .included li:hover { background: var(--terra-dark); translate: 0 -4px; }
+  .included li:hover svg { background: var(--ivory); color: var(--terra-dark); transform: scale(1.08); }
+
+  .family__facts li:hover svg { background: var(--terra-dark); transform: scale(1.08); }
+
+  .marquee__track li:hover img, .days__paint:hover img, .days__cards:hover img, .days__walk:hover img,
+  .care__media:hover img, .family__media:hover img { transform: scale(1.05); }
+}
 
 /* Movimento: entrada com desfoque. O estado oculto só existe com JS e sem "reduzir movimento" */
 @media (prefers-reduced-motion: no-preference) {
