@@ -17,8 +17,8 @@ Para testar localmente: `python -m http.server 5173` dentro desta pasta.
 - Sem cookies, sem rastreamento, sem serviços de terceiros carregados na página.
 
 ## Imagens
-Fotos reais (pasta `Fotos/`): sala de estar, quartos, espaço ecumênico, sala de TV, convivência, varanda, pintura.
-Geradas com Magnific (projeto "Villa Firenze - Landing Page"): hero (álbum de família, horizontal e vertical, Nano Banana 2.1 em 2K); mãos no jogo de memória, jogo de cartas, caminhada no pomar e visita da família (Nano Banana 2 em 2K). A transparência sobre elas fica numa linha do rodapé.
+Todas as fotos do site são reais, da Villa Firenze (pasta `Fotos/` do Drive e foto das responsáveis enviada em 13/10). Atendendo ao pedido da cliente, as cenas geradas por IA foram retiradas.
+Duas fotos passaram por upscale no Magnific (Nano Banana 2.1, 2K), só para ganhar resolução, com instrução de manter tudo idêntico: a placa da fachada (hero) e o close das responsáveis (Quem cuida). Vale a aprovação das responsáveis para o close.
 
 ## Testes executados (12/10/2026)
 - html-validate: sem erros (index e privacidade).
@@ -32,8 +32,8 @@ Geradas com Magnific (projeto "Villa Firenze - Landing Page"): hero (álbum de f
 2. **Instagram (resolvido 13/10)**: `@senior.firenze`, confirmado pela cliente.
 3. **Conflitos do flyer com o briefing** (o site segue o briefing): flyer diz "fisioterapia todos os dias" (briefing: 3x por semana) e cita psicóloga, pedagoga e música, que não constam no briefing.
 4. **CEP** do endereço: fontes divergem (84070-020 ou 84070-660); não publicado.
-5. **Autorização de imagem** das fotos reais com pessoas (pintura; a foto de mãos com cuidadora não foi usada).
-6. **Retratos reais** de Leticia e Paola e fotos reais do pomar, área de refeição e banheiros acessíveis (hoje não há).
+5. **Autorização de imagem** das fotos reais com pessoas: pintura, mãos da cuidadora com residente (dia a dia) e o close das responsáveis (upscale com IA, confirmar que aprovam).
+6. **Mais fotos reais** ajudariam: pomar, área de refeição, banheiros acessíveis e atividades em grupo.
 7. **Logo vetorial (SVG/AI)**: só havia JPEG; a vetorização do Magnific estava desabilitada.
 8. **Domínio**: publicado em https://villa-fi.vercel.app (canonical, `og:image` e `sitemap.xml` apontam para ele). Trocar se houver domínio próprio.
 9. **Licença da Kurdis** para uso na web: o zip não trazia arquivo de licença.
