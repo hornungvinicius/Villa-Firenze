@@ -674,7 +674,7 @@ svg { width: 1.5rem; height: 1.5rem; fill: currentColor; flex: none; }
 
 /* Rodapé: continuação da porta */
 .footer {
-  padding-block: clamp(3.5rem, 7vw, 5.5rem) 2rem;
+  padding-block: clamp(3.5rem, 7vw, 5.5rem) calc(5.5rem + env(safe-area-inset-bottom, 0px));
   background: var(--forest-deep);
   color: rgb(246 240 228 / 0.86);
   font-size: 0.9375rem;
@@ -703,6 +703,34 @@ svg { width: 1.5rem; height: 1.5rem; fill: currentColor; flex: none; }
   .footer__base { grid-template-columns: auto 1fr; gap: 2rem; }
   .footer__base p:last-child { text-align: right; }
 }
+
+/* WhatsApp fixo: mesmo número dos outros links (wa.me/5542991459898) */
+.wa-float {
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  z-index: calc(var(--z-grain) + 1);
+  display: grid;
+  place-items: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 0 0 6px rgb(37 211 102 / 0.18), 0 12px 28px -10px rgb(18 90 48 / 0.55);
+  transition: translate 0.35s var(--ease), background-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.wa-float svg { width: 1.9rem; height: 1.9rem; }
+.wa-float__text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+body:has(.menu-open) .wa-float { visibility: hidden; pointer-events: none; }
+@media print { .wa-float { display: none; } }
 
 /* Política de Privacidade */
 .page-plain .header { position: sticky; background: var(--forest); color: var(--ivory); }
@@ -746,6 +774,8 @@ svg { width: 1.5rem; height: 1.5rem; fill: currentColor; flex: none; }
 
   .marquee__track li:hover img, .days__paint:hover img, .days__cards:hover img,
   .care__media:hover img, .family__media:hover img { transform: scale(1.05); }
+
+  .wa-float:hover { background: #1ebe5a; translate: 0 -3px; }
 }
 
 /* Movimento: entrada com desfoque. O estado oculto só existe com JS e sem "reduzir movimento" */

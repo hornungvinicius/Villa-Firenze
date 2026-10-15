@@ -14,7 +14,7 @@ Para testar localmente: `python -m http.server 5173` dentro desta pasta.
 - Tipografia: **Kurdis** (única família; largura e peso controlados pelos eixos variáveis). Detalhes em `DESIGN.md`.
 - Cores medidas na logo: verde `#1C3B24` (logo `#17391F`), marrom, dourado `#94753F` (só na logo). Superfícies marfim/linho, sálvia, terracota como único acento.
 - Recursos da Coraiz adaptados: campos de cor chapados, fólio editorial, painéis com contorno fino e numeração em círculo, fotos em arco (porta de casa), luz dourada.
-- Sem cookies, sem rastreamento, sem serviços de terceiros carregados na página.
+- Google Tag Manager (`GTM-TQJWW5NM`) no `index.html` e em `privacidade.html`. Botão fixo de WhatsApp no canto inferior direito, no mesmo número da constante `PHONE`.
 
 ## Textos
 Em 14/10 entraram os textos enviados pela cliente (documento `site.docx`): hero, seção do 9, dia a dia, quem cuida, cards do acompanhamento, card dos quartos e seção da família. O site passou a usar "o Villa Firenze" (masculino), como nos textos dela.
