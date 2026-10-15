@@ -16,6 +16,9 @@ Para testar localmente: `python -m http.server 5173` dentro desta pasta.
 - Recursos da Coraiz adaptados: campos de cor chapados, fólio editorial, painéis com contorno fino e numeração em círculo, fotos em arco (porta de casa), luz dourada.
 - Sem cookies, sem rastreamento, sem serviços de terceiros carregados na página.
 
+## Textos
+Em 14/10 entraram os textos enviados pela cliente (documento `site.docx`): hero, seção do 9, dia a dia, quem cuida, cards do acompanhamento, card dos quartos e seção da família. O site passou a usar "o Villa Firenze" (masculino), como nos textos dela.
+
 ## Imagens
 Todas as fotos do site são reais, da Villa Firenze (pasta `Fotos/` do Drive e foto das responsáveis enviada em 13/10). Atendendo ao pedido da cliente, as cenas geradas por IA foram retiradas.
 Duas fotos passaram por upscale no Magnific (Nano Banana 2.1, 2K), só para ganhar resolução, com instrução de manter tudo idêntico: a placa da fachada (hero) e o close das responsáveis (Quem cuida). Vale a aprovação das responsáveis para o close.

@@ -21,10 +21,10 @@
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preload" href="assets/fonts/kurdis-variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=22">
+  <link rel="stylesheet" href="styles.css?v=24">
   <script>document.documentElement.classList.add('js')</script>
   <script src="assets/js/lenis.min.js" defer></script>
-  <script src="main.js?v=22" defer></script>
+  <script src="main.js?v=24" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -94,16 +94,17 @@
   <main id="conteudo">
     <!-- 1. Acolhimento -->
     <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <span class="hero__sentinel" data-hero-sentinel aria-hidden="true"></span>
       <div class="hero__media">
         <img src="images/hero/fachada-placa-960.webp"
              srcset="images/hero/fachada-placa-640.webp 640w, images/hero/fachada-placa-960.webp 960w, images/hero/fachada-placa-1400.webp 1400w"
              sizes="(min-width: 64rem) 58vw, 100vw" width="960" height="1286" fetchpriority="high"
-             alt="Placa na entrada da Villa Firenze, no gramado em frente à casa, com a frase Onde o cuidado se transforma em carinho e o nome das responsáveis.">
+             alt="Placa na entrada do Villa Firenze, no gramado em frente à casa, com a frase Onde o cuidado se transforma em carinho e o nome das responsáveis.">
       </div>
       <div class="hero__copy">
         <p class="hero__kicker">Residencial Sênior e Centro Dia</p>
-        <h1 id="hero-title">Cuidado especializado, com jeito de casa.</h1>
-        <p class="hero__lede">Uma casa em Ponta Grossa com ambientes planejados para pessoas idosas, conduzida por duas enfermeiras especialistas em saúde do idoso.</p>
+        <h1 id="hero-title">Um lar pensado em cada detalhe, para quem merece todo cuidado.</h1>
+        <p class="hero__lede">Um espaço de alto padrão, cuidadosamente planejado para proporcionar conforto, segurança, acolhimento e qualidade de vida à pessoa idosa. Sob a direção de duas enfermeiras especialistas em Saúde do Idoso, oferecemos um cuidado humanizado e individualizado, unindo conhecimento técnico, experiência e carinho para valorizar a autonomia, o bem-estar e a dignidade de cada residente.</p>
         <div class="hero__actions">
           <a class="btn btn--forest" href="#visita" data-wa="visita">Agendar uma visita</a>
           <a class="link-arrow" href="#casa">Conhecer a casa</a>
@@ -118,7 +119,8 @@
         <div class="nine__text">
           <p class="label">Capacidade máxima</p>
           <h2 id="nove-title">Uma casa para até 9&nbsp;residentes.</h2>
-          <p>São quatro quartos, uma sala de convivência, a área de refeições e o pomar. Manter a casa pequena foi uma escolha das responsáveis. Com poucos residentes, o dia a dia conserva o ritmo de uma casa de família.</p>
+          <p>Contamos com quatro quartos, sala de TV, ambientes de convivência internos e externos, sala de jantar e um agradável pomar, proporcionando conforto, tranquilidade e momentos especiais no dia a dia.</p>
+          <p>Nosso grande diferencial é manter a residência exclusiva para apenas nove residentes. Essa proposta permite oferecer um atendimento mais próximo, individualizado e humanizado.</p>
           <img class="sprig" src="assets/brand/sprig-ivory.png" width="103" height="27" alt="">
         </div>
       </div>
@@ -128,21 +130,21 @@
     <section class="house" id="casa" aria-labelledby="casa-title">
       <div class="wrap house__head">
         <h2 id="casa-title">Uma casa planejada, cômodo por cômodo.</h2>
-        <p>Arquitetura e móveis planejados para o dia a dia de pessoas idosas. As fotos abaixo são da própria Villa Firenze.</p>
+        <p>Arquitetura e móveis planejados para o dia a dia de pessoas idosas. As fotos abaixo são do próprio Villa Firenze.</p>
       </div>
-      <section class="marquee" data-marquee aria-label="Fotos da Villa Firenze">
+      <section class="marquee" data-marquee aria-label="Fotos do Villa Firenze">
         <ul class="marquee__track">
           <li><img src="images/environments/sala-de-estar-600.webp" srcset="images/environments/sala-de-estar-600.webp 600w, images/environments/sala-de-estar-1000.webp 1000w" sizes="(min-width: 64rem) 24rem, 70vw" width="600" height="800" loading="lazy" alt="Sala de estar com sofás brancos, almofadas em tons terrosos, cortinas claras e piso de taco."></li>
           <li><img src="images/environments/quarto-duplo-600.webp" srcset="images/environments/quarto-duplo-600.webp 600w, images/environments/quarto-duplo-1000.webp 1000w" sizes="(min-width: 64rem) 24rem, 70vw" width="600" height="800" loading="lazy" alt="Quarto com duas camas arrumadas, criados-mudos, ar-condicionado e forro de madeira."></li>
           <li><img src="images/environments/quarto-luz-vigilia-600.webp" srcset="images/environments/quarto-luz-vigilia-600.webp 600w, images/environments/quarto-luz-vigilia-900.webp 900w" sizes="(min-width: 64rem) 24rem, 70vw" width="600" height="1067" loading="lazy" alt="Quarto com cabeceira de móveis planejados, luz suave e quadro de paisagem marinha."></li>
-          <li><img src="images/environments/convivencia-tv-600.webp" srcset="images/environments/convivencia-tv-600.webp 600w, images/environments/convivencia-tv-1000.webp 1000w" sizes="(min-width: 64rem) 24rem, 70vw" width="600" height="800" loading="lazy" alt="Sala de convivência com poltronas de madeira, sofá branco, estante e a logo da Villa Firenze na parede."></li>
+          <li><img src="images/environments/convivencia-tv-600.webp" srcset="images/environments/convivencia-tv-600.webp 600w, images/environments/convivencia-tv-1000.webp 1000w" sizes="(min-width: 64rem) 24rem, 70vw" width="600" height="800" loading="lazy" alt="Sala de convivência com poltronas de madeira, sofá branco, estante e a logo do Villa Firenze na parede."></li>
           <li><img src="images/environments/espaco-ecumenico-600.webp" srcset="images/environments/espaco-ecumenico-600.webp 600w, images/environments/espaco-ecumenico-1000.webp 1000w" sizes="(min-width: 64rem) 24rem, 70vw" width="600" height="800" loading="lazy" alt="Espaço ecumênico com crucifixo de madeira, aparador branco, velas e uma pequena planta."></li>
           <li><img src="images/environments/varanda-600.webp" srcset="images/environments/varanda-600.webp 600w, images/environments/varanda-1000.webp 1000w" sizes="(min-width: 64rem) 24rem, 70vw" width="600" height="800" loading="lazy" alt="Varanda com parede de tijolos, pergolado de madeira e cadeiras, vista do jardim no fim da tarde."></li>
         </ul>
       </section>
       <div class="house__foot">
       <ul class="wrap feature-cards">
-        <li><svg aria-hidden="true"><use href="#i-bed"/></svg><p>Quartos climatizados, com camas ortopédicas</p></li>
+        <li><svg aria-hidden="true"><use href="#i-bed"/></svg><p>Quartos climatizados, com camas confortáveis padrão solteiro king size, grades de proteção (se necessário) e roupa de cama linha Hotelaria Profitel</p></li>
         <li><svg aria-hidden="true"><use href="#i-bell"/></svg><p>Luz de vigília e campainha em todos os quartos</p></li>
         <li><svg aria-hidden="true"><use href="#i-shield-check"/></svg><p>Corrimão nas áreas de circulação e banheiros acessíveis</p></li>
         <li><svg aria-hidden="true"><use href="#i-tree"/></svg><p>Pomar, espaço ecumênico e área de refeição ampla</p></li>
@@ -155,13 +157,14 @@
       <div class="wrap days__grid">
         <div class="days__text">
           <h2 id="rotina-title">Cada dia é uma oportunidade para viver bem.</h2>
-          <p>A semana tem exercícios de memória e de coordenação motora, pintura, desenho, jogos e incentivo à caminhada. A equipe também acompanha as atividades da vida diária, no ritmo de cada residente.</p>
+          <p>Nossa programação semanal é cuidadosamente planejada para estimular a memória, a coordenação motora e a cognição, por meio de atividades como pintura, desenho, jogos e caminhadas orientadas. Tudo isso em um ambiente acolhedor, que incentiva a autonomia, a socialização e o bem-estar.</p>
+          <p>Nossa equipe acompanha de perto a rotina de cada residente, respeitando suas necessidades, preferências e seu próprio ritmo, porque no Villa Firenze cada detalhe é pensado para proporcionar qualidade de vida e um envelhecimento ativo e digno.</p>
         </div>
         <div class="days__paint">
           <img src="images/activities/pintura-real-1000.webp" srcset="images/activities/pintura-real-600.webp 600w, images/activities/pintura-real-1000.webp 1000w" sizes="(min-width: 64rem) 36vw, 100vw" width="1000" height="1333" loading="lazy" alt="Um senhor de costas, sentado à mesa de mármore, pinta uma pequena peça com pincel.">
         </div>
         <div class="days__cards">
-          <img src="images/activities/maos-cuidado-934.webp" srcset="images/activities/maos-cuidado-600.webp 600w, images/activities/maos-cuidado-934.webp 934w" sizes="(min-width: 64rem) 46vw, 100vw" width="934" height="700" loading="lazy" alt="Na área externa da Villa Firenze, uma cuidadora segura as mãos de um residente durante uma atividade à mesa.">
+          <img src="images/activities/maos-cuidado-934.webp" srcset="images/activities/maos-cuidado-600.webp 600w, images/activities/maos-cuidado-934.webp 934w" sizes="(min-width: 64rem) 46vw, 100vw" width="934" height="700" loading="lazy" alt="Na área externa do Villa Firenze, uma cuidadora segura as mãos de um residente durante uma atividade à mesa.">
         </div>
       </div>
     </section>
@@ -172,20 +175,21 @@
         <div class="care__text">
           <h2 id="cuidado-title">Quem cuida da casa</h2>
           <p class="care__names"><span>Leticia Waselcoski <span class="amp">e</span></span> <span>Paola Martins Schwab</span></p>
-          <p>As duas são enfermeiras especialistas em saúde do idoso pelo Hospital Universitário Regional dos Campos Gerais, formadas pela UEPG, e sócias há dez anos. A Villa Firenze nasceu do sonho das duas de abrir um lar para pessoas idosas. A equipe de cuidadoras passa por capacitações constantes.</p>
+          <p>O Villa Firenze nasceu do sonho de duas enfermeiras e sócias há mais de dez anos, formadas pela UEPG e especialistas em Saúde do Idoso pelo Hospital Universitário Regional dos Campos Gerais. Unimos nossa experiência, conhecimento técnico e amor pelo cuidado para criar um residencial que vai além da moradia: um lugar onde acolhimento, dignidade e qualidade de vida caminham juntos.</p>
+          <p>Nossa equipe de cuidadoras participa de capacitações contínuas, garantindo atualização profissional e um cuidado cada vez mais qualificado, seguro e humanizado. No Villa Firenze, cada residente é tratado com respeito à sua individualidade, sua história e suas necessidades, porque acreditamos que envelhecer merece ser uma experiência de cuidado, conforto e pertencimento.</p>
         </div>
         <div class="care__media">
-          <img src="images/care/responsaveis-1000.webp?v=2" srcset="images/care/responsaveis-640.webp?v=2 640w, images/care/responsaveis-1000.webp?v=2 1000w, images/care/responsaveis-1400.webp?v=2 1400w" sizes="(min-width: 64rem) 34vw, 100vw" width="1000" height="1250" loading="lazy" alt="Leticia Waselcoski e Paola Martins Schwab, responsáveis pela Villa Firenze, em frente à casa.">
+          <img src="images/care/responsaveis-1000.webp?v=2" srcset="images/care/responsaveis-640.webp?v=2 640w, images/care/responsaveis-1000.webp?v=2 1000w, images/care/responsaveis-1400.webp?v=2 1400w" sizes="(min-width: 64rem) 34vw, 100vw" width="1000" height="1250" loading="lazy" alt="Leticia Waselcoski e Paola Martins Schwab, responsáveis pelo Villa Firenze, em frente à casa.">
         </div>
       </div>
 
       <div class="wrap rhythm">
         <h3 class="rhythm__title">O ritmo do acompanhamento</h3>
         <ul class="rhythm__cards">
-          <li><svg aria-hidden="true"><use href="#i-sun"/></svg><p class="rhythm__when">Todos os dias</p><p>Cuidadoras de idosos e enfermeira</p></li>
-          <li><svg aria-hidden="true"><use href="#i-person-simple-walk"/></svg><p class="rhythm__when">Três vezes por semana</p><p>Fisioterapeuta</p></li>
+          <li><svg aria-hidden="true"><use href="#i-sun"/></svg><p class="rhythm__when">Todos os dias</p><p>Serviço de enfermeira especializada em saúde do idoso e cuidadoras</p></li>
+          <li><svg aria-hidden="true"><use href="#i-person-simple-walk"/></svg><p class="rhythm__when">Três vezes por semana</p><p>Serviço de fisioterapia</p></li>
           <li><svg aria-hidden="true"><use href="#i-barbell"/></svg><p class="rhythm__when">Uma vez por semana</p><p>Educador físico</p></li>
-          <li><svg aria-hidden="true"><use href="#i-stethoscope"/></svg><p class="rhythm__when">Uma vez por mês</p><p>Médico responsável pelo gerenciamento</p></li>
+          <li><svg aria-hidden="true"><use href="#i-stethoscope"/></svg><p class="rhythm__when">Uma vez por mês</p><p>Médico geriatra responsável por integrar o cuidado, gerenciando o atendimento e as especificações do lar e de cada idoso individualmente</p></li>
         </ul>
       </div>
     </section>
@@ -194,14 +198,15 @@
     <section class="family" aria-labelledby="familia-title">
       <div class="wrap family__grid">
         <div class="family__media">
-          <img src="images/environments/sala-estante-1000.webp" srcset="images/environments/sala-estante-600.webp 600w, images/environments/sala-estante-1000.webp 1000w" sizes="(min-width: 64rem) 40vw, 100vw" width="1000" height="1333" loading="lazy" alt="Sala de estar da Villa Firenze, com sofá branco, almofadas terrosas e estante planejada, onde a família é recebida.">
+          <img src="images/environments/sala-estante-1000.webp" srcset="images/environments/sala-estante-600.webp 600w, images/environments/sala-estante-1000.webp 1000w" sizes="(min-width: 64rem) 40vw, 100vw" width="1000" height="1333" loading="lazy" alt="Sala de estar do Villa Firenze, com sofá branco, almofadas terrosas e estante planejada, onde a família é recebida.">
         </div>
         <div class="family__text">
-          <h2 id="familia-title">A família perto, todos os dias.</h2>
+          <h2 id="familia-title">A família faz parte. Sempre.</h2>
           <ul class="family__facts">
-            <li><svg aria-hidden="true"><use href="#i-chat-circle-text"/></svg><div><p class="family__fact">Notícias todos os dias</p><p>Durante a adaptação, contamos à família, diariamente, como ela está acontecendo.</p></div></li>
-            <li><svg aria-hidden="true"><use href="#i-door-open"/></svg><div><p class="family__fact">Visitas liberadas 24 horas</p><p>A família pode vir quando quiser.</p></div></li>
+            <li><svg aria-hidden="true"><use href="#i-chat-circle-text"/></svg><div><p class="family__fact">Acompanhamento diário na adaptação</p><p>Sabemos que a chegada a um novo lar envolve sentimentos e mudanças para toda a família. Por isso, durante o período de adaptação, mantemos os familiares informados diariamente sobre o bem-estar, a rotina e a evolução do residente, transmitindo segurança e tranquilidade em cada etapa.</p></div></li>
+            <li><svg aria-hidden="true"><use href="#i-door-open"/></svg><div><p class="family__fact">Liberdade para estar presente</p><p>No Villa Firenze, valorizamos os vínculos afetivos e acreditamos que a presença da família é essencial para o bem-estar emocional do idoso. Por isso, as visitas são permitidas 24 horas por dia, respeitando as necessidades de cuidado, descanso e privacidade dos residentes.</p></div></li>
           </ul>
+          <p class="family__close">Porque cuidar também é acolher quem ama.</p>
         </div>
       </div>
     </section>
@@ -209,7 +214,7 @@
     <!-- 4b. Como funciona -->
     <section class="modes" id="modalidades" aria-labelledby="modalidades-title">
       <div class="wrap">
-        <h2 id="modalidades-title">Duas formas de estar na Villa</h2>
+        <h2 id="modalidades-title">Duas formas de estar no Villa</h2>
         <div class="modes__grid">
           <article class="mode-card">
             <svg class="mode-card__icon" aria-hidden="true"><use href="#i-house-line"/></svg>
@@ -223,9 +228,9 @@
           <article class="mode-card">
             <svg class="mode-card__icon" aria-hidden="true"><use href="#i-sun-horizon"/></svg>
             <h3>Centro Dia</h3>
-            <p>Para quem passa o dia na Villa, participa das atividades e da convivência e volta para casa.</p>
+            <p>Para quem passa o dia no Villa, participa das atividades e da convivência e volta para casa.</p>
             <a class="link-arrow mode-card__link" href="#visita" data-wa="modalidades">Tirar dúvidas pelo WhatsApp</a>
-            <img class="mode-card__img" src="images/environments/sala-tv-600.webp" srcset="images/environments/sala-tv-600.webp 600w, images/environments/sala-tv-1000.webp 1000w" sizes="(min-width: 64rem) 36vw, 90vw" width="600" height="800" loading="lazy" alt="Sala de convivência da Villa Firenze, com sofá em L, estante planejada e televisão.">
+            <img class="mode-card__img" src="images/environments/sala-tv-600.webp" srcset="images/environments/sala-tv-600.webp 600w, images/environments/sala-tv-1000.webp 1000w" sizes="(min-width: 64rem) 36vw, 90vw" width="600" height="800" loading="lazy" alt="Sala de convivência do Villa Firenze, com sofá em L, estante planejada e televisão.">
           </article>
         </div>
         <h3 class="included__title">Incluso na rotina da casa</h3>
@@ -259,7 +264,7 @@
             <p>Durante a adaptação, a equipe conta à família, todos os dias, como ela está acontecendo. Cuidadoras e enfermeira acompanham os residentes diariamente.</p>
           </details>
           <details>
-            <summary>Como saber se a Villa é adequada?</summary>
+            <summary>Como saber se o Villa é adequado?</summary>
             <p>A casa atende pessoas idosas com grau I e II de dependência. Pela classificação da Anvisa, o grau I inclui pessoas independentes, mesmo que usem equipamentos de autoajuda; o grau II, pessoas com dependência em até três atividades de autocuidado, como alimentação, mobilidade e higiene, sem comprometimento cognitivo ou com alteração cognitiva controlada.</p>
             <p>Na primeira conversa, ajuda contar como está a autonomia no dia a dia, quais medicamentos são usados e como está o acompanhamento de saúde.</p>
           </details>
@@ -276,7 +281,7 @@
       <div class="door">
         <div class="wrap door__grid">
           <div class="door__media">
-            <img src="images/environments/fachada-placa-1000.webp" srcset="images/environments/fachada-placa-600.webp 600w, images/environments/fachada-placa-1000.webp 1000w" sizes="(min-width: 64rem) 30vw, 70vw" width="1000" height="1333" loading="lazy" alt="Placa na entrada da Villa Firenze, no gramado, com a frase Onde o cuidado se transforma em carinho e o nome das responsáveis.">
+            <img src="images/environments/fachada-placa-1000.webp" srcset="images/environments/fachada-placa-600.webp 600w, images/environments/fachada-placa-1000.webp 1000w" sizes="(min-width: 64rem) 30vw, 70vw" width="1000" height="1333" loading="lazy" alt="Placa na entrada do Villa Firenze, no gramado, com a frase Onde o cuidado se transforma em carinho e o nome das responsáveis.">
           </div>
           <div class="door__body">
             <h2 id="visita-title">Venha conhecer a casa.</h2>
@@ -351,7 +356,7 @@
     </div>
     <div class="wrap footer__base">
       <p>© 2026 Villa Firenze Residencial Sênior</p>
-      <p>Fotos da Villa Firenze, em Ponta Grossa, PR.</p>
+      <p>Fotos do Villa Firenze, em Ponta Grossa, PR.</p>
     </div>
   </footer>
 </body>

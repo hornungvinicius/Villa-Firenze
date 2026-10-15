@@ -3,8 +3,8 @@
 const PHONE = '42991459898';
 
 const MESSAGES = {
-  visita: 'Olá! Gostaria de agendar uma visita para conhecer a Villa Firenze.',
-  modalidades: 'Olá! Gostaria de entender melhor as modalidades Residencial Sênior e Centro Dia da Villa Firenze.',
+  visita: 'Olá! Gostaria de agendar uma visita para conhecer o Villa Firenze.',
+  modalidades: 'Olá! Gostaria de entender melhor as modalidades Residencial Sênior e Centro Dia do Villa Firenze.',
 };
 
 const waLink = (text) => `https://wa.me/55${PHONE}?text=${encodeURIComponent(text)}`;
@@ -46,10 +46,10 @@ document.addEventListener('keydown', (e) => {
 matchMedia('(min-width: 64rem)').addEventListener('change', () => setMenu(false));
 
 // Header transparente sobre o hero; verde depois dele (ou com o menu aberto)
-const hero = document.getElementById('inicio');
+const sentinel = document.querySelector('[data-hero-sentinel]');
 let heroVisible = true;
 function syncHeader() { header.classList.toggle('is-solid', !heroVisible || header.classList.contains('menu-open')); }
-new IntersectionObserver(([e]) => { heroVisible = e.intersectionRatio >= 0.6; syncHeader(); }, { threshold: [0.6] }).observe(hero);
+new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; syncHeader(); }).observe(sentinel);
 
 // Carrossel da casa: duplica as fotos para o laço contínuo; velocidade constante em qualquer largura
 const track = document.querySelector('.marquee__track');
@@ -104,7 +104,7 @@ form.addEventListener('submit', (e) => {
   if (!validate()) { nome.focus(); return; }
   const f = form.elements;
   const lines = [
-    'Olá! Vim pelo site e gostaria de agendar uma visita para conhecer a Villa Firenze.',
+    'Olá! Vim pelo site e gostaria de agendar uma visita para conhecer o Villa Firenze.',
     '',
     `Nome: ${f.nome.value.trim()}`,
     `Para quem é o cuidado: ${f.para.value.trim() || 'não informado'}`,

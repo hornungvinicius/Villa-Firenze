@@ -85,7 +85,7 @@ h1, h2, h3 {
 h2 { font-size: clamp(2.1rem, 1.3rem + 3vw, 3.75rem); line-height: 1.05; letter-spacing: -0.02em; }
 h3 { font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.875rem); line-height: 1.15; letter-spacing: -0.01em; }
 /* Parágrafos curtos com linhas de comprimento parecido */
-.hero__lede, .nine__text > p:not(.label), .house__head p, .days__text p, .door__lede, .mode-card > p { text-wrap: balance; }
+.house__head p, .door__lede, .mode-card > p { text-wrap: balance; }
 
 svg { width: 1.5rem; height: 1.5rem; fill: currentColor; flex: none; }
 /* Sprite de ícones: só fornece os <symbol>, não ocupa espaço */
@@ -293,9 +293,12 @@ svg { width: 1.5rem; height: 1.5rem; fill: currentColor; flex: none; }
 
 /* 1. Hero: foto real da entrada, que se dissolve no marfim onde está o texto */
 .hero {
+  position: relative;
   padding-bottom: 3.5rem;
   background: var(--ivory);
 }
+/* Marcador para o header: fica verde depois que o topo do hero passa */
+.hero__sentinel { position: absolute; top: 7rem; left: 0; width: 1px; height: 1px; }
 .hero__media img {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -347,7 +350,13 @@ svg { width: 1.5rem; height: 1.5rem; fill: currentColor; flex: none; }
   }
   .hero__copy { margin-top: 0; padding: calc(var(--header-h) + 2rem) 0 7rem; }
   .hero__copy > * { max-width: min(36rem, 44vw); }
-  .hero h1 { max-width: min(46rem, 50vw); font-size: clamp(2.75rem, 0.4rem + 3.4vw, 4.25rem); line-height: 1.02; }
+  .hero h1 { max-width: min(54rem, 46vw); font-size: clamp(2.5rem, 0.4rem + 3.4vw, 4.25rem); line-height: 1.04; }
+}
+/* 1024 a 1279: título e texto mais estreitos, longe do texto da placa */
+@media (min-width: 64rem) and (max-width: 79.99rem) {
+  .hero__copy > *, .hero h1 { max-width: 40vw; }
+  .hero h1 { font-size: 2.5rem; }
+  .hero__lede { font-size: 1rem; }
 }
 
 /* 2. O número 9 */
@@ -444,7 +453,7 @@ svg { width: 1.5rem; height: 1.5rem; fill: currentColor; flex: none; }
 .days { padding-bottom: var(--section); background: var(--ivory); }
 .days__grid { display: grid; gap: 2rem; }
 .days__text { display: grid; gap: 1.25rem; align-content: end; }
-.days__text p { max-width: 34rem; color: var(--ink-soft); }
+.days__text p { max-width: 36rem; color: var(--ink-soft); }
 .days__text h2 { color: var(--forest); max-width: 14em; }
 .days img { width: 100%; object-fit: cover; border-radius: var(--radius); }
 .days__paint img { aspect-ratio: 4 / 5; }
@@ -462,7 +471,7 @@ svg { width: 1.5rem; height: 1.5rem; fill: currentColor; flex: none; }
 .care__grid { display: grid; gap: 2.5rem; align-items: center; }
 .care__text { display: grid; gap: 1.5rem; }
 .care__text h2 { color: var(--forest); }
-.care__text > p:last-child { max-width: 36rem; color: var(--ink-soft); }
+.care__text > p:not(.care__names) { max-width: 38rem; color: var(--ink-soft); }
 .care__names { --wd: 80; --wg: 6; font-size: clamp(1.6rem, 1.25rem + 1.6vw, 2.5rem); line-height: 1.15; }
 .care__names > span { display: block; }
 .care__names .amp { color: var(--terra-dark); }
@@ -499,6 +508,7 @@ svg { width: 1.5rem; height: 1.5rem; fill: currentColor; flex: none; }
 .family__facts svg { width: 3.25rem; height: 3.25rem; padding: 0.8rem; border-radius: 50%; background: var(--forest); color: var(--ivory); }
 .family__fact { --wd: 80; --wg: 6; font-size: 1.375rem; line-height: 1.2; color: var(--forest); margin-bottom: 0.3rem; }
 .family__facts li p:last-child { color: var(--ink-soft); }
+.family__close { --wd: 80; --wg: 6; font-size: clamp(1.25rem, 1.1rem + 0.6vw, 1.625rem); line-height: 1.25; color: var(--terra-dark); text-wrap: balance; }
 @media (min-width: 64rem) { .family__grid { grid-template-columns: 5fr 6fr; gap: clamp(3rem, 7vw, 7rem); } }
 
 /* 4b. Como funciona: cards verdes */
